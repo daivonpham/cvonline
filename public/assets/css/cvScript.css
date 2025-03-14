@@ -1,0 +1,94 @@
+.dropdown-container {
+    position: relative;
+}
+
+.nested-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: auto;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.main-menu, .sub-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.menu-item-major {
+    padding: 8px 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+.menu-item-major:hover {
+    background-color: #f5f5f5;
+}
+
+.menu-item-major > span {
+    display: block;
+    padding-right: 20px;
+}
+
+.menu-item-major .sub-menu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    min-width: 200px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.menu-item-major:hover > .sub-menu {
+    display: block;
+}
+
+.menu-item-final {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.menu-item-final:hover {
+    background-color: #f5f5f5;
+}
+
+
+.menu-item-final-lang {
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+.nested-dropdown-lang {
+    display: none;
+    position: absolute;
+    background: white;
+    border: 1px solid #ccc;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.nested-dropdown-lang.show {
+    display: block;
+}
+.selected-lang {
+    display: inline-block;
+    background: #007bff;
+    color: white;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.selected-lang .remove-lang {
+    margin-left: 5px;
+    cursor: pointer;
+}
